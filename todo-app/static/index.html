@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Todos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body class="bg-light">
+    <main class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h1 class="text-center mb-4">My Todos</h1>
+                        
+                        <form id="todo-form" class="mb-4">
+                            <div class="input-group">
+                                <input type="text" id="todo-input" class="form-control" placeholder="What needs to be done?" maxlength="100" required>
+                                <button type="submit" class="btn btn-primary">Add</button>
+                            </div>
+                        </form>
+
+                        <div id="error-box" class="alert alert-danger d-none" role="alert"></div>
+
+                        <div class="btn-group w-100 mb-3" role="group" aria-label="Filter todos">
+                            <button type="button" class="btn btn-outline-secondary active" data-filter="all">All</button>
+                            <button type="button" class="btn btn-outline-secondary" data-filter="active">Active</button>
+                            <button type="button" class="btn btn-outline-secondary" data-filter="completed">Completed</button>
+                        </div>
+
+                        <ul id="todo-list" class="list-group mb-3">
+                            <!-- Todos will be rendered here -->
+                        </ul>
+
+                        <div class="d-flex justify-content-between align-items-center mt-4 pt-3 border-top">
+                            <span id="remaining-count" class="text-muted small">0 tasks remaining</span>
+                            <button id="clear-completed" class="btn btn-sm btn-outline-danger">Clear completed</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/js/app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.container {
+    margin-top: 3rem;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.list-group-item {
+    transition: background-color 0.2s ease;
+}
+
+.list-group-item:hover {
+    background-color: #f1f3f5;
+}
+
+.word-break {
+    word-break: break-word;
+}
+
+@media (max-width: 576px) {
+    .btn {
+        min-height: 38px;
+    }
+}
